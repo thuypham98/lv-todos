@@ -59,3 +59,27 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Dev
+- create project: composer create-project --prefer-dist laravel/laravel lv-todos "7.*"
+- cd lv-todos
+- composer require laravel/ui:^2.4
+- php artisan ui vue --auth
+- npm i
+- create database
+- edit .env config (DB_DATABASE)
+- npm run watch (compile css, js)
+- php artisan serve
+- create todo.blade.php, edit routes (./routes/web.php), edit layouts (@extends, @section)
+- create TodoComponent.vue (.\resources\js\components\TodoComponent.vue) and edit app.js (.\resources\js\app.js)
+- php artisan make:model todo -mcr
+- edit migrate file created (add table field)
+- php artisan migrate (create table from files inside .\database\migrations)
+- edit model file (add fillable)
+- edit form, add createTodo() method... (TodoComponent)
+- edit routes (add Route::resource('todo', 'TodoController')) (./routes/api.php)
+- edit store function (TodoController) -> can insert record to DB
+- edit index function (TodoController) -> can get data from DB
+- add and call getTodos() method... (TodoComponent)
+- add update, delete method (Controller, Component)
+- ...
